@@ -3,7 +3,7 @@
 CIA-SSD-AI-TRT(CIA-SSD ALL IN TensorRT,NMS not implemented in TensorRT,implemented in c++) 
 CIA-SSD consists of five parts:
 - preprocess: generate voxel, it is implemented in voxelGenerator.cu,it is a TensorRT plugin
-- 3D backbone: 3D backbone include 3D sparse conv and 3D subm conv. sparseConv3dlayer.cu is a TensorRT plugin for 3D sparse conv, and submConv3dlayer.cu is a TensorRT plugin for 3D subm conv.
+- 3D backbone: 3D backbone include 3D sparse Convolution and 3D Submanifold Convolution. sparseConv3dlayer.cu is a TensorRT plugin for 3D sparse conv, and submConv3dlayer.cu is a TensorRT plugin for 3D subm conv.
 - neck: this part is mainy implemented by TensorRT aip, because they are all general modules. the function of sparse2Dense.cu is  from sparse tensor to dense tensor
 - head: this part is mainy implemented by TensorRT aip.
 - postprocess: it includes anchorGenerate and decoder, they are implemented by generateAnchorDecode.cu, it is also a plugin.
@@ -28,7 +28,7 @@ cmake ..
 make
 sudo ./cia-ssd-ai-trt -s             // serialize model to plan file i.e. 'cia-ssd-ai-trt.engine'
 sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, the images in samples will be processed.
-**one frame takes 1-2 seconds, it is very slow, needs to be optimized in the future.**
+**one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in the future.**
 ```
 
 2. check the outputs generated
@@ -39,6 +39,8 @@ cd tools
 python show_box_in_points.py, type C, you can show lidar points and boxes one by one,
 
 ```
+![Image text](https://raw.githubusercontent.com/jingyue202205/CIA-SSD-AI-TRT/master/pics/snapshot.png)
+
 
 ## More Information
 
