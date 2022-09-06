@@ -13,9 +13,9 @@ CIA-SSD consists of five parts:
 ## Config
 
 - all config in params.h
-- FP16/FP32 can be selected by USE_FP16
-- GPU id can be selected by DEVICE
-- NMS thresh in params.h
+- FP16/FP32 can be selected by USE_FP16 in params.h
+- GPU id can be selected by DEVICE in params.h
+- NMS thresh can be modified by NMS_THRESH in params.h
 
 ## How to Run
 
