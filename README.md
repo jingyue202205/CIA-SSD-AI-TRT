@@ -19,7 +19,7 @@ CIA-SSD consists of five parts:
 
 ## How to Run
 
-1. build tensorrtx/yolov3-spp and run
+1. build CIA-SSD-AI-TRT and run
 
 ```
 cd CIA-SSD-AI-TRT
@@ -28,12 +28,12 @@ cd build
 cmake ..
 make
 sudo ./cia-ssd-ai-trt -s             // serialize model to plan file i.e. 'cia-ssd-ai-trt.engine'
-sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, the images in samples will be processed.
+sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, lidar points will be processed.
 
 ```
 **one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in  the future.**
 
-2. show 3D boxes in the lidar frame 
+2. show predicted 3D boxes in the lidar frame 
 
 ```
 fristly install python moudles by tools/requirements.txt
