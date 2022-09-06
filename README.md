@@ -47,7 +47,7 @@ predicted outputs saved in CIA-SSD-AI-TRT/data/outputs folder
 ```
 fristly install python moudles by tools/requirements.txt
 cd tools
-python show_box_in_points.py, type C, you can show lidar points and boxes one by one,
+python show_box_in_points.py, do not close current Mayavi Scene window, type C in running terminal, it will show lidar frame with predited 3d boxes in current Mayavi Scene window. 
 
 ```
 ![Image text](https://raw.githubusercontent.com/jingyue202205/CIA-SSD-AI-TRT/master/pics/000010.png)
