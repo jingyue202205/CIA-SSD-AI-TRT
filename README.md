@@ -36,7 +36,7 @@ sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, the imag
 2. show 3D boxes in the lidar frame 
 
 ```
-frist install python moudles by tools/requirements.txt
+fristly install python moudles by tools/requirements.txt
 cd tools
 python show_box_in_points.py, type C, you can show lidar points and boxes one by one,
 
