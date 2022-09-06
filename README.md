@@ -40,14 +40,16 @@ sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, lidar po
 predicted outputs saved in CIA-SSD-AI-TRT/data/outputs folder
 
 ```
-**one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in  the future.**
+**one frame takes about 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and NVIDIA GeForce GTX 1050 Mobile(1050ti), it is very slow, needs to be optimized in  the future.**
 
 2. show predicted 3D boxes in the lidar frame 
 
 ```
 fristly install python moudles by tools/requirements.txt
 cd tools
-python show_box_in_points.py, do not close current Mayavi Scene window, type C in running terminal, it will show lidar frame with predited 3d boxes in current Mayavi Scene window. 
+python show_box_in_points.py
+warning: do not close current Mayavi Scene window, type C in running terminal, 
+it will show next lidar frame with predited 3d boxes in current Mayavi Scene window. 
 
 ```
 ![Image text](https://raw.githubusercontent.com/jingyue202205/CIA-SSD-AI-TRT/master/pics/000010.png)
