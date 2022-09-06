@@ -39,7 +39,9 @@ cd tools
 python show_box_in_points.py, type C, you can show lidar points and boxes one by one,
 
 ```
+![Image text](https://raw.githubusercontent.com/jingyue202205/CIA-SSD-AI-TRT/master/pics/000010.png)
 ![Image text](https://raw.githubusercontent.com/jingyue202205/CIA-SSD-AI-TRT/master/pics/snapshot.png)
+
 
 
 ## More Information
