@@ -22,6 +22,14 @@ CIA-SSD consists of five parts:
 1. build CIA-SSD-AI-TRT and run
 
 ```
+firstly, install TensorRT,my environment is ubuntu 18.04, cuda 10.2,cudnn8.2.
+I installed TensorRT with TensorRT-8.0.1.6.Linux.x86_64-gnu.cuda-10.2.cudnn8.2.tar.gz.
+
+after that, modify CMakeLists.txt
+include_directories(/home/xxx/softwares/nvidia/TensorRT-8.0.1.6/include)
+link_directories(/home/xxx/softwares/nvidia/TensorRT-8.0.1.6/lib)
+Change these two lines to your own path
+
 cd CIA-SSD-AI-TRT
 mkdir build
 cd build

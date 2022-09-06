@@ -17,9 +17,10 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # cuda
 include_directories(/usr/local/cuda/include)
 link_directories(/usr/local/cuda/lib64)
+
 # tensorrt
-include_directories(/home/guo/softwares/nvidia/TensorRT-8.0.1.6/include)
-link_directories(/home/guo/softwares/nvidia/TensorRT-8.0.1.6/lib)
+include_directories(/home/xxx/softwares/nvidia/TensorRT-8.0.1.6/include)
+link_directories(/home/xxx/softwares/nvidia/TensorRT-8.0.1.6/lib)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Ofast -Wfatal-errors -D_MWAITXINTRIN_H_INCLUDED")
 
@@ -44,8 +45,6 @@ target_link_libraries(generateAnchorDecodelayer nvinfer cudart)
 cuda_add_library(filterBoxByScorelayer SHARED ${PROJECT_SOURCE_DIR}/filterBoxByScore.cu)
 target_link_libraries(filterBoxByScorelayer nvinfer cudart)
 
-
-
 add_executable(cia-ssd-ai-trt ${PROJECT_SOURCE_DIR}/cia-ssd-ai-trt.cpp)
 target_link_libraries(cia-ssd-ai-trt nvinfer)
 target_link_libraries(cia-ssd-ai-trt cudart)
@@ -56,8 +55,6 @@ target_link_libraries(cia-ssd-ai-trt sparse2Denselayer)
 target_link_libraries(cia-ssd-ai-trt zeroPad2dlayer)
 target_link_libraries(cia-ssd-ai-trt generateAnchorDecodelayer)
 target_link_libraries(cia-ssd-ai-trt filterBoxByScorelayer)
-
-
 
 add_definitions(-O2 -pthread)
 
