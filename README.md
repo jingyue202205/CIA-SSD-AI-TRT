@@ -48,5 +48,15 @@ python show_box_in_points.py, type C, you can show lidar points and boxes one by
 
 ## More Information
 
-See the readme in [home page.](https://github.com/wang-xinyu/tensorrtx)
+Reference code:
+[CIA-SSD](https://github.com/Vegeta2020/CIA-SSD)  
+[spconv](https://github.com/poodarchu/spconv)
+[tensorrtx](https://github.com/wang-xinyu/tensorrtx) 
+[tensorrt_plugin](https://github.com/NVIDIA/TensorRT/tree/main/plugin)
+[CUDA-PointPillars](https://github.com/NVIDIA-AI-IOT/CUDA-PointPillars)
+[frustum_pointnets_pytorch](https://github.com/simon3dv/frustum_pointnets_pytorch)
+
+
+
+
 
