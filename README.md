@@ -29,6 +29,7 @@ cmake ..
 make
 sudo ./cia-ssd-ai-trt -s             // serialize model to plan file i.e. 'cia-ssd-ai-trt.engine'
 sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, lidar points will be processed.
+predicted outputs saved in /data/outputs folder
 
 ```
 **one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in  the future.**
