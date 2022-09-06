@@ -1,6 +1,6 @@
 # CIA-SDD-AI-TRT
 
-CIA-SSD-AI-TRT(CIA-SSD ALL IN TensorRT,NMS not implemented in TensorRT,implemented in c++) 
+CIA-SSD-AI-TRT(**CIA-SSD ALL IN TensorRT**,NMS not implemented in TensorRT,implemented in c++) 
 
 CIA-SSD consists of five parts:
 - preprocess: generate voxel, it is implemented in voxelGenerator.cu,it is a TensorRT plugin
@@ -29,10 +29,11 @@ cmake ..
 make
 sudo ./cia-ssd-ai-trt -s             // serialize model to plan file i.e. 'cia-ssd-ai-trt.engine'
 sudo ./cia-ssd-ai-trt -d    // deserialize plan file and run inference, the images in samples will be processed.
-**one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in the future.**
-```
 
-2. check the outputs generated
+```
+**one frame takes 1-2 seconds on my laptop with Intel(R) Core(TM) i5-7300HQ and nvidia 1050ti, it is very slow, needs to be optimized in  the future.**
+
+2. show 3D boxes in the lidar frame 
 
 ```
 frist install python moudles by tools/requirements.txt
