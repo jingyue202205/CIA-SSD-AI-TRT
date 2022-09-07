@@ -88,8 +88,6 @@ def txt2json_dict(data):
 def show():
 
     txt_path_prefix = '../data/outputs/'
-    if not os.path.exists(txt_path_prefix):
-        os.makedirs(txt_path_prefix)
     bin_root_ = '../data/kitti_training_velodyne_reduced/*.bin'
     fig = mlab.figure(figure=None, bgcolor=(0, 0, 0),
                       fgcolor=None, engine=None, size=(1000, 600))
