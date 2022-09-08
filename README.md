@@ -2,7 +2,7 @@
 
 CIA-SSD-AI-TRT(**CIA-SSD ALL IN TensorRT**,NMS not implemented in TensorRT,implemented in c++) 
 
-CIA-SSD consists of five parts:
+CIA-SSD consists of six parts:
 - preprocess: generate voxel, it is implemented in voxelGenerator.cu,it is a TensorRT plugin
 - 3D backbone: 3D backbone include 3D sparse Convolution and 3D Submanifold Convolution. sparseConv3dlayer.cu is a TensorRT plugin for 3D sparse Convolution, and submConv3dlayer.cu is a TensorRT plugin for 3D Submanifold Convolution.
 - neck: this part is mainy implemented by TensorRT aip, because they are all general modules. the function of sparse2Dense.cu is  from sparse tensor to dense tensor
