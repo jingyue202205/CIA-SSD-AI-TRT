@@ -48,7 +48,7 @@ predicted outputs saved in CIA-SSD-AI-TRT/data/outputs folder
 fristly install python moudles by tools/requirements.txt
 cd tools
 python show_box_in_points.py
-warning: do not close current Mayavi Scene window, type c in running terminal, 
+warning: do not close current Mayavi Scene window, type c in running terminal,and press Enter, 
 it will show next lidar frame with predited 3d boxes in current Mayavi Scene window. 
 
 ```

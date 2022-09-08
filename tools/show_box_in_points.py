@@ -1,4 +1,5 @@
 import pdb
+import os
 import json
 import glob
 import numpy as np
@@ -94,13 +95,14 @@ def show():
     bin_paths = sorted(bin_paths,key=lambda x:int(x.split('/')[-1].split('.')[0]))
     for bin_path in bin_paths[0:]:
         txt_path = txt_path_prefix + bin_path.split('/')[-1].replace('.bin','.txt')
-        print(bin_path)
-        print(txt_path)
+
         points = read_bin(bin_path)
         data = read_txt(txt_path)
+        print(bin_path)
+        print(txt_path)
+        print('box_num: ',data.__len__())
       
         res_data = txt2json_dict(data)
-        
 
         draw_lidar(points, fig=fig)
 
